@@ -1,0 +1,95 @@
+openapi: 3.0.0
+info:
+  title: Device Report
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  '/reports/{report_id}':
+    parameters:
+      - type: string
+        name: report_id
+        in: path
+        required: true
+    get:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  IMEI:
+                    type: string
+                  sequence_number:
+                    type: string
+                  time_of_report:
+                    type: string
+                  geolocation_data:
+                    type: object
+                    properties:
+                      latitude:
+                        type: string
+                      longitude:
+                        type: string
+                      heading:
+                        type: string
+                      altitude:
+                        type: string
+                      time_of_measurment:
+                        type: string
+                      number_of_satellites:
+                        type: integer
+                      '':
+                        type: string
+                  sensor_data:
+                    type: object
+                    properties:
+                      orientation-sensor:
+                        type: object
+                        properties:
+                          status:
+                            type: string
+                          x-axis:
+                            type: string
+                          y-axis:
+                            type: string
+                          z-axis:
+                            type: string
+                          custom_data:
+                            type: object
+                            properties:
+                              attribute 1:
+                                type: string
+                              attribute 2:
+                                type: string
+                      voltage-sensor:
+                        type: object
+                        properties:
+                          main:
+                            type: string
+                          auxillary:
+                            type: string
+                          charging:
+                            type: string
+                          custom_data:
+                            type: object
+                            properties:
+                              attribute 1:
+                                type: string
+                              attribute 2:
+                                type: string
+                      '':
+                        type: string
+      parameters: []
+    post:
+      summary: ''
+components:
+  schemas: {}
+  securitySchemes:
+    API Key - 1:
+      name: API Key
+      type: apiKey
+      in: query
