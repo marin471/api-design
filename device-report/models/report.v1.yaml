@@ -1,0 +1,68 @@
+title: Device Report
+description: 'Standard device report formatted in JSON and used to exchange data between our internal and external APIs. '
+type: object
+x-tags:
+  - Pets
+xml:
+  name: Pet
+x-examples:
+  example-1: {}
+properties:
+  IMEI:
+    type: string
+  sequence_number:
+    type: string
+  time_of_report:
+    type: string
+  geolocation_data:
+    type: object
+    properties:
+      latitude:
+        type: string
+      longitude:
+        type: string
+      heading:
+        type: string
+      altitude:
+        type: string
+      time_of_measurment:
+        type: string
+      number_of_satellites:
+        type: integer
+  sensor_data:
+    type: object
+    properties:
+      orientation-sensor:
+        type: object
+        properties:
+          status:
+            type: string
+          x-axis:
+            type: string
+          y-axis:
+            type: string
+          z-axis:
+            type: string
+          custom_data:
+            type: object
+            properties:
+              attribute 1:
+                type: string
+              attribute 2:
+                type: string
+      voltage-sensor:
+        type: object
+        properties:
+          main:
+            type: string
+          auxillary:
+            type: string
+          charging:
+            type: string
+          custom_data:
+            type: object
+            properties:
+              attribute 1:
+                type: string
+              attribute 2:
+                type: string
