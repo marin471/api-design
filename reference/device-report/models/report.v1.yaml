@@ -1,8 +1,6 @@
 title: Device Report
 description: 'Standard device report formatted in JSON and used to exchange data between our internal and external APIs. '
 type: object
-x-tags:
-  - Pets
 xml:
   name: Pet
 x-examples:
