@@ -2,9 +2,8 @@ title: Device Report
 description: 'Standard device report formatted in JSON and used to exchange data between our internal and external APIs. '
 type: object
 xml:
-  name: Pet
-x-examples:
-  example-1: {}
+  name: Reports
+x-examples: {}
 properties:
   IMEI:
     type: string
@@ -12,55 +11,51 @@ properties:
     type: string
   time_of_report:
     type: string
-  geolocation_data:
+  event_id:
+    type: string
+  battery_voltage:
+    type: string
+  external_voltage:
+    type: string
+  location_data:
     type: object
     properties:
       latitude:
         type: string
       longitude:
         type: string
-      heading:
-        type: string
       altitude:
         type: string
-      time_of_measurment:
+      time_of_measurement:
         type: string
-      number_of_satellites:
-        type: integer
+      heading:
+        type:
+          - string
+          - number
+      speed:
+        type:
+          - string
+          - number
   sensor_data:
     type: object
     properties:
-      orientation-sensor:
-        type: object
-        properties:
-          status:
-            type: string
-          x-axis:
-            type: string
-          y-axis:
-            type: string
-          z-axis:
-            type: string
-          custom_data:
-            type: object
-            properties:
-              attribute 1:
-                type: string
-              attribute 2:
-                type: string
-      voltage-sensor:
-        type: object
-        properties:
-          main:
-            type: string
-          auxillary:
-            type: string
-          charging:
-            type: string
-          custom_data:
-            type: object
-            properties:
-              attribute 1:
-                type: string
-              attribute 2:
-                type: string
+      voltage_sensor:
+        $ref: ../../common/models/voltage-sensor.v1.yaml
+      orientation_sensor:
+        $ref: ../../common/models/orientation-sensor.v1.yaml
+      temperature_sensor:
+        $ref: ../../common/models/temperature-sensor.v1.yaml
+      ultrasonic_sensor:
+        $ref: ../../common/models/ultrasonic_sensor.v1.yaml
+      abs_sensor:
+        $ref: ../../common/models/abs_sensor.v1.yaml
+      atis_sensor:
+        $ref: ../../common/models/atis-sensor.v1.yaml
+      tpms_sensor:
+        $ref: ../../common/models/tpms-sensor.v1.yaml
+      brake_sensor:
+        $ref: ../../common/models/brake-stroke-sensor.v1.yaml
+      door_sensor:
+        $ref: ../../common/models/door-sensor.v1.yaml
+required:
+  - IMEI

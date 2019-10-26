@@ -1,0 +1,11 @@
+title: ABS Sensor
+type: object
+properties:
+  mileage:
+    type: number
+  status:
+    type: string
+  active_faults:
+    type: object
+  stored_faults:
+    type: string

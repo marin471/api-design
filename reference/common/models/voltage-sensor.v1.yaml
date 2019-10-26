@@ -1,0 +1,9 @@
+title: Voltage sensor
+type: object
+properties:
+  main_voltage:
+    type: string
+  'external_voltage  ':
+    type: string
+  '':
+    type: string

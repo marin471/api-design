@@ -1,0 +1,7 @@
+title: Temperature sensor
+type: object
+properties:
+  ambient_temperature:
+    type: string
+  internal_temperature:
+    type: string

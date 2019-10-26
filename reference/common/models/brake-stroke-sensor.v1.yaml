@@ -1,0 +1,21 @@
+title: Brake Stroke sensor
+type: object
+properties:
+  fault_status:
+    type: string
+  left_front:
+    type: string
+  right_front:
+    type: string
+  left_rear:
+    type: string
+  right_rear:
+    type: string
+  overstrock_left_front:
+    type: number
+  overstrock_right_front:
+    type: number
+  overstrock_left_rear:
+    type: number
+  overstrock_right_rear:
+    type: integer

@@ -1,0 +1,7 @@
+title: Door sensor
+type: object
+properties:
+  status:
+    type: string
+  door_status:
+    type: string

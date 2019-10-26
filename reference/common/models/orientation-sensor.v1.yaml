@@ -1,0 +1,11 @@
+title: Orientation sensor
+type: object
+properties:
+  status:
+    type: string
+  x_axis:
+    type: number
+  y_axis:
+    type: number
+  z-axis:
+    type: number

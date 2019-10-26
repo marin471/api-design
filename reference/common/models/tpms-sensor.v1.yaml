@@ -1,0 +1,19 @@
+title: TPMS sensor
+type: object
+properties:
+  status:
+    type: string
+  quantity:
+    type: string
+  tire_location:
+    type: array
+    items:
+      type: integer
+  pressure:
+    type: array
+    items:
+      type: number
+  temperature:
+    type: array
+    items:
+      type: number
