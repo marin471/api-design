@@ -3,41 +3,45 @@ description: 'Standard device report formatted in JSON and used to exchange data
 type: object
 xml:
   name: Reports
-x-examples: {}
+x-examples:
+  example-1: {}
 properties:
-  IMEI:
+  device_id:
+    type: string
+  imei:
     type: string
   asset_id:
-    type: string    
+    type: string
   sequence_number:
     type: string
-  time_of_report:
+  report_datetime:
     type: string
-  event_type:
+  event_name:
     type: string
-  battery_voltage:
-    type: string
-  external_voltage:
-    type: string
-  location_data:
+  status:
     type: object
     properties:
-      latitude:
+      geolocation:
+        type: object
+        properties:
+          latitude:
+            type: number
+          longitude:
+            type: number
+          gps_timestamp:
+            type: string
+      battery_voltage:
         type: string
-      longitude:
+      external_voltage:
         type: string
-      altitude:
-        type: string
-      time_of_measurement:
-        type: string
-      heading:
-        type:
-          - string
-          - number
       speed:
-        type:
-          - string
-          - number
+        type: number
+      heading:
+        type: number
+      ambient_temperature:
+        type: string
+      internal_temperature:
+        type: string
   sensor_data:
     type: object
     properties:
@@ -59,5 +63,3 @@ properties:
         $ref: ../../common/models/brake-stroke-sensor.v1.yaml
       door_sensor:
         $ref: ../../common/models/door-sensor.v1.yaml
-required:
-  - IMEI
