@@ -31,17 +31,17 @@ properties:
           gps_timestamp:
             type: string
       battery_voltage:
-        type: string
+        type: number
       external_voltage:
-        type: string
+        type: number
       speed:
         type: number
       heading:
         type: number
       ambient_temperature:
-        type: string
+        type: number
       internal_temperature:
-        type: string
+        type: number
   sensor_data:
     type: object
     properties:
