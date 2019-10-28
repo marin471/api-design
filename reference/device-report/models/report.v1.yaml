@@ -7,11 +7,13 @@ x-examples: {}
 properties:
   IMEI:
     type: string
+  asset_id:
+    type: string    
   sequence_number:
     type: string
   time_of_report:
     type: string
-  event_id:
+  event_type:
     type: string
   battery_voltage:
     type: string
