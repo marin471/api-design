@@ -21,22 +21,19 @@ properties:
   status:
     type: object
     properties:
-      geolocation:
-        type: object
-        properties:
-          latitude:
-            type: number
-          longitude:
-            type: number
-          gps_timestamp:
-            type: string
-      battery_voltage:
+      latitude:
         type: number
-      external_voltage:
+      longitude:
         type: number
       speed:
         type: number
       heading:
+        type: number
+      gps_timestamp:
+        type: string
+      battery_voltage:
+        type: number
+      external_voltage:
         type: number
       ambient_temperature:
         type: number
