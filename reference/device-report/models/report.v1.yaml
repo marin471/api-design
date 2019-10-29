@@ -6,8 +6,6 @@ xml:
 x-examples:
   example-1: {}
 properties:
-  device_id:
-    type: string
   imei:
     type: string
   asset_id:
@@ -18,6 +16,17 @@ properties:
     type: string
   event_name:
     type: string
+  sensor_data:
+    type: array
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+        status:
+          type: string
+        data:
+          type: object
   status:
     type: object
     properties:
@@ -39,24 +48,3 @@ properties:
         type: number
       internal_temperature:
         type: number
-  sensor_data:
-    type: object
-    properties:
-      voltage_sensor:
-        $ref: ../../common/models/voltage-sensor.v1.yaml
-      orientation_sensor:
-        $ref: ../../common/models/orientation-sensor.v1.yaml
-      temperature_sensor:
-        $ref: ../../common/models/temperature-sensor.v1.yaml
-      ultrasonic_sensor:
-        $ref: ../../common/models/ultrasonic_sensor.v1.yaml
-      abs_sensor:
-        $ref: ../../common/models/abs_sensor.v1.yaml
-      atis_sensor:
-        $ref: ../../common/models/atis-sensor.v1.yaml
-      tpms_sensor:
-        $ref: ../../common/models/tpms-sensor.v1.yaml
-      brake_sensor:
-        $ref: ../../common/models/brake-stroke-sensor.v1.yaml
-      door_sensor:
-        $ref: ../../common/models/door-sensor.v1.yaml
