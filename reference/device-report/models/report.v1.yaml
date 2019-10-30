@@ -6,13 +6,13 @@ xml:
 x-examples:
   example-1: {}
 properties:
-  imei:
+  device_id:
     type: string
   asset_id:
     type: string
   sequence_number:
     type: string
-  report_datetime:
+  event_datetime:
     type: string
   event_name:
     type: string
@@ -48,3 +48,5 @@ properties:
         type: number
       internal_temperature:
         type: number
+      trip_status:
+        type: boolean
