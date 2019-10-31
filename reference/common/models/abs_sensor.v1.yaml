@@ -1,11 +1,32 @@
 title: ABS Sensor
 type: object
 properties:
-  mileage:
+  odometer:
     type: number
   status:
     type: string
   active_faults:
     type: object
-  stored_faults:
+    properties:
+      SID:
+        type: string
+      is_active:
+        type:
+          - string
+          - boolean
+      count:
+        type: integer
+      FMI_code:
+        type: string
+      FMI_description:
+        type: string
+  warning_lamp_status:
+    type: string
+  vin:
+    type: string
+  type:
+    type: string
+  voltage:
+    type: string
+  brake_control_status:
     type: string

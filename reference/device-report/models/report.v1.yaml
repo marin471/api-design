@@ -38,15 +38,17 @@ properties:
         type: number
       heading:
         type: number
-      gps_timestamp:
+      location_timestamp:
         type: string
-      battery_voltage:
-        type: number
-      external_voltage:
+      is_external_power:
         type: number
       ambient_temperature:
         type: number
       internal_temperature:
         type: number
-      trip_status:
+      is_on_trip:
         type: boolean
+  version:
+    type: string
+  '':
+    type: string

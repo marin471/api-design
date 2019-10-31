@@ -1,0 +1,11 @@
+title: Cargo sensor
+type: object
+properties:
+  distance_to_cargo:
+    type: integer
+  type:
+    type: string
+  status:
+    type: string
+  state:
+    type: string

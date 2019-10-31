@@ -1,7 +1,0 @@
-title: Ultrasonic sensor
-type: object
-properties:
-  reading_age:
-    type: integer
-  distance:
-    type: integer

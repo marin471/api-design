@@ -5,15 +5,14 @@ properties:
     type: string
   quantity:
     type: string
-  tire_location:
-    type: array
-    items:
-      type: integer
-  pressure:
-    type: array
-    items:
-      type: number
-  temperature:
-    type: array
-    items:
-      type: number
+  type:
+    type: string
+  tire_measurements:
+    type: object
+    properties:
+      location_id:
+        type: string
+      temperature:
+        type: string
+      pressure:
+        type: string
