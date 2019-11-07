@@ -25,11 +25,11 @@ properties:
         type:
           type: string
           enum:
-            - abs
-            - tpms
             - voltage
             - cargo
-            - atis
+            - ABS
+            - TPMS
+            - ATIS
         status:
           type: string
           enum:
@@ -37,7 +37,7 @@ properties:
             - unresponsive
             - fault
         data:
-          oneOf:
+          allOf:
             - $ref: ../../common/models/voltage-sensor.v1.yaml
             - $ref: ../../common/models/abs_sensor.v1.yaml
             - $ref: ../../common/models/atis-sensor.v1.yaml
@@ -45,8 +45,6 @@ properties:
             - $ref: ../../common/models/cargo_sensor.v1.yaml
             - $ref: ../../common/models/temperature-sensor.v1.yaml
             - $ref: ../../common/models/gps_sensor.v1.yaml
-        '':
-          type: string
   status:
     type: object
     properties:
