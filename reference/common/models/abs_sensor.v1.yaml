@@ -3,9 +3,7 @@ type: object
 properties:
   odometer:
     type: number
-  status:
-    type: string
-  active_faults:
+  faults:
     type: object
     properties:
       SID:
@@ -21,10 +19,8 @@ properties:
       FMI_description:
         type: string
   warning_lamp_status:
-    type: string
+    type: boolean
   vin:
-    type: string
-  type:
     type: string
   voltage:
     type: string

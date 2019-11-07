@@ -1,5 +1,5 @@
 title: Device Report
-description: 'Standard device report formatted in JSON and used to exchange data between our internal and external APIs. '
+description: Standard used to represent a report from PCT devices
 type: object
 xml:
   name: Reports
@@ -8,6 +8,7 @@ x-examples:
 properties:
   device_id:
     type: string
+    description: ''
   asset_id:
     type: string
   sequence_number:
@@ -26,7 +27,12 @@ properties:
         status:
           type: string
         data:
-          type: object
+          oneOf:
+            - $ref: ../../common/models/voltage-sensor.v1.yaml
+            - $ref: ../../common/models/abs_sensor.v1.yaml
+            - $ref: ../../common/models/atis-sensor.v1.yaml
+            - $ref: ../../common/models/tpms-sensor.v1.yaml
+            - $ref: ../../common/models/cargo_sensor.v1.yaml
   status:
     type: object
     properties:
@@ -41,7 +47,9 @@ properties:
       location_timestamp:
         type: string
       is_external_power:
-        type: number
+        type:
+          - number
+          - boolean
       ambient_temperature:
         type: number
       internal_temperature:
@@ -50,5 +58,5 @@ properties:
         type: boolean
   version:
     type: string
-  '':
-    type: string
+required:
+  - device_id

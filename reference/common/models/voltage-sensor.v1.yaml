@@ -1,9 +1,42 @@
-title: Voltage sensor
+title: Gateway Voltage Sensor
 type: object
+description: ''
 properties:
-  main_voltage:
-    type: string
-  'external_voltage  ':
-    type: string
-  '':
-    type: string
+  external:
+    type: object
+    description: Voltage of the auxiliary power input measured in mV
+    properties:
+      external_voltage_1:
+        type: number
+        description: units are in mV
+      external_voltage_2:
+        type: number
+        description: units are in mV
+  charging:
+    type: object
+    description: Voltage of the dedicated charging power input measured in mV
+    properties:
+      voltage:
+        type: number
+        description: units are in mV
+  battery:
+    type: object
+    description: Voltage of the main battery measured in mV
+    properties:
+      voltage:
+        type: number
+        description: units are in mV
+      remaining_capacity:
+        type: number
+      temperature:
+        type: number
+  solar:
+    type: object
+    properties:
+      current:
+        type: number
+      voltage:
+        type: number
+        description: units are in mV
+      energy:
+        type: number

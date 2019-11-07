@@ -1,18 +1,27 @@
 title: TPMS sensor
-type: object
-properties:
-  status:
-    type: string
-  quantity:
-    type: string
-  type:
-    type: string
-  tire_measurements:
-    type: object
-    properties:
-      location_id:
-        type: string
-      temperature:
-        type: string
-      pressure:
-        type: string
+type: array
+items:
+  type: object
+  properties:
+    location:
+      type: string
+      description: |-
+        Format is 'Axle number|Orientation|Tire index'
+
+        1. Axle number is an integer from 1 to n [max 9]
+        2. Orientation is character either 'L' [left] or 'R' [right]
+        3. Tire index is an integer from 1 to n [max 9] where 1 is the outermost tire
+    status:
+      type: string
+      description: "Possible values are 'healthy', 'unresponsive' or 'error'"
+    temperature:
+      description: units are in celsius
+      type: number
+    pressure:
+      type: number
+      description: units are in millibars
+  required:
+    - location
+    - status
+    - temperature
+    - pressure
