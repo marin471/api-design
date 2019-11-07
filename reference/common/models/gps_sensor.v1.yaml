@@ -10,3 +10,5 @@ properties:
   time_of_measurement:
     type: string
     format: date
+  version:
+    type: string

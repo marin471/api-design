@@ -10,3 +10,5 @@ properties:
   internal_temperature_2:
     type: number
     description: Units are in celsius
+  version:
+    type: string

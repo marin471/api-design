@@ -7,3 +7,5 @@ properties:
   status:
     type: string
     description: "Possible values are 'loaded', 'empty' or 'unknown'"
+  version:
+    type: string

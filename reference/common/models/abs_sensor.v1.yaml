@@ -1,0 +1,43 @@
+title: ABS Sensor
+type: object
+properties:
+  odometer:
+    type: number
+    description: Units in kilometers
+  faults:
+    type: array
+    description: Based on the J1587 standard
+    items:
+      type: object
+      properties:
+        SID:
+          type: string
+        is_active:
+          type: boolean
+        count:
+          type: integer
+        FMI_code:
+          type: string
+        FMI_description:
+          type: string
+  warning_lamp_status:
+    type: string
+    enum:
+      - active
+      - inactive
+      - error
+      - na
+  vin:
+    type: string
+  voltage:
+    description: Units in millivolts (mV)
+    type: number
+  brake_control_status:
+    type: string
+    enum:
+      - active
+      - inactive
+      - error
+      - na
+  version:
+    type: string
