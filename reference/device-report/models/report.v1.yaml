@@ -43,6 +43,8 @@ properties:
             - $ref: ../../common/models/atis-sensor.v1.yaml
             - $ref: ../../common/models/tpms-sensor.v1.yaml
             - $ref: ../../common/models/cargo_sensor.v1.yaml
+            - $ref: ../../common/models/temperature-sensor.v1.yaml
+            - $ref: ../../common/models/gps_sensor.v1.yaml
   status:
     type: object
     properties:

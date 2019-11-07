@@ -2,6 +2,11 @@ title: Temperature sensor
 type: object
 properties:
   ambient_temperature:
-    type: string
-  internal_temperature:
-    type: string
+    type: number
+    description: Units are in celsius
+  internal_temperature_1:
+    type: number
+    description: Units are in celsius
+  internal_temperature_2:
+    type: number
+    description: Units are in celsius

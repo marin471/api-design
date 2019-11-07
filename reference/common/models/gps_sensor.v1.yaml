@@ -1,0 +1,12 @@
+title: gps_sensor
+type: object
+x-tags:
+  - gps
+properties:
+  latitude:
+    type: number
+  longitude:
+    type: number
+  time_of_measurement:
+    type: string
+    format: date

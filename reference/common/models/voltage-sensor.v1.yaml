@@ -8,7 +8,7 @@ properties:
     properties:
       external_voltage_1:
         type: number
-        description: units are in mV
+        description: Units are in millivolts (mV)
       external_voltage_2:
         type: number
         description: units are in mV
@@ -18,18 +18,19 @@ properties:
     properties:
       voltage:
         type: number
-        description: units are in mV
+        description: Units are in millivolts (mV)
   battery:
     type: object
     description: Voltage of the main battery measured in mV
     properties:
       voltage:
         type: number
-        description: units are in mV
+        description: Units are in millivolts (mV)
       remaining_capacity:
         type: number
       temperature:
         type: number
+        description: Units are in celsius
   solar:
     type: object
     properties:
