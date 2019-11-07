@@ -24,8 +24,18 @@ properties:
       properties:
         type:
           type: string
+          enum:
+            - abs
+            - tpms
+            - voltage
+            - cargo
+            - atis
         status:
           type: string
+          enum:
+            - normal
+            - unresponsive
+            - fault
         data:
           oneOf:
             - $ref: ../../common/models/voltage-sensor.v1.yaml
@@ -42,14 +52,16 @@ properties:
         type: number
       speed:
         type: number
+        description: Units in kilometers per hour
       heading:
         type: number
       location_timestamp:
         type: string
-      is_external_power:
-        type:
-          - number
-          - boolean
+      current_power_source:
+        type: string
+        enum:
+          - external
+          - battery
       ambient_temperature:
         type: number
       internal_temperature:
