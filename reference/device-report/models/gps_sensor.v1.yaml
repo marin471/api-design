@@ -1,6 +1,10 @@
 title: GPS Sensor
 type: object
 properties:
+  type:
+    type: string
+  status:
+    type: string
   latitude:
     type: number
   longitude:
@@ -8,5 +12,3 @@ properties:
   time_of_measurement:
     type: string
     format: date
-  version:
-    type: string

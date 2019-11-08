@@ -1,6 +1,11 @@
 title: ABS Sensor
 type: object
 properties:
+  type:
+    type: string
+    pattern: abs
+  status:
+    type: string
   odometer:
     type: number
     description: Units in kilometers
@@ -39,5 +44,3 @@ properties:
       - inactive
       - error
       - na
-  version:
-    type: string

@@ -41,5 +41,7 @@ properties:
         description: units are in mV
       energy:
         type: number
-  version:
+  type:
+    type: string
+  status:
     type: string

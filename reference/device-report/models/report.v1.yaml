@@ -48,6 +48,11 @@ properties:
     type: array
     items:
       anyOf:
+        - $ref: ./abs_sensor.v1.yaml
+        - $ref: ./atis-sensor.v1.yaml
+        - $ref: ./cargo_sensor.v1.yaml
+        - $ref: ./gps_sensor.v1.yaml
+        - $ref: ./temperature-sensor.v1.yaml
         - $ref: ./tpms-sensor.v1.yaml
         - $ref: ./voltage-sensor.v1.yaml
 required:

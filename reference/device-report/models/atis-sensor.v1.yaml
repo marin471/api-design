@@ -1,9 +1,11 @@
 title: ATIS sensor
 type: object
 properties:
+  type:
+    type: string
+  status:
+    type: string
   quantity:
     type: integer
   inflation_time:
     type: number
-  version:
-    type: string
