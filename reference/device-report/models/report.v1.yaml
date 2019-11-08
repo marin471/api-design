@@ -46,6 +46,13 @@ properties:
     type: string
   sensor_data:
     type: array
+    enum:
+      - abs
+      - tpms
+      - atis
+      - gps
+      - cargo
+      - voltage
     items:
       type: object
       properties:
