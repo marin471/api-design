@@ -1,6 +1,10 @@
 title: TPMS sensor
 type: object
 properties:
+  type:
+    type: string
+  status:
+    type: string
   location:
     type: string
     description: |-
@@ -9,10 +13,6 @@ properties:
       1. Axle number is an integer from 1 to n [max 9]
       2. Orientation is character either 'L' [left] or 'R' [right]
       3. Tire index is an integer from 1 to n [max 9] where 1 is the outermost tire
-  type:
-    type: string
-  status:
-    type: string
   temperature:
     description: Units are in celsius
     type: number
