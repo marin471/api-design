@@ -17,34 +17,6 @@ properties:
     type: string
   event_name:
     type: string
-  sensor_data:
-    type: array
-    items:
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-            - voltage
-            - cargo
-            - ABS
-            - TPMS
-            - ATIS
-        status:
-          type: string
-          enum:
-            - normal
-            - unresponsive
-            - fault
-        data:
-          allOf:
-            - $ref: ../../common/models/voltage-sensor.v1.yaml
-            - $ref: ../../common/models/abs_sensor.v1.yaml
-            - $ref: ../../common/models/atis-sensor.v1.yaml
-            - $ref: ../../common/models/tpms-sensor.v1.yaml
-            - $ref: ../../common/models/cargo_sensor.v1.yaml
-            - $ref: ../../common/models/temperature-sensor.v1.yaml
-            - $ref: ../../common/models/gps_sensor.v1.yaml
   status:
     type: object
     properties:
@@ -72,5 +44,16 @@ properties:
         type: boolean
   version:
     type: string
+  sensor_data:
+    type: array
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+        status:
+          type: string
+        data:
+          type: object
 required:
   - device_id
