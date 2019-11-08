@@ -3,8 +3,14 @@ type: object
 properties:
   type:
     type: string
+    enum:
+      - TPMS
   status:
     type: string
+    enum:
+      - healthy
+      - unresponsive
+      - error
   location:
     type: string
     description: |-
@@ -20,7 +26,7 @@ properties:
     type: number
     description: Units are in millibars
 required:
-  - location
   - status
+  - location
   - temperature
   - pressure

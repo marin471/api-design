@@ -1,11 +1,17 @@
 title: ABS Sensor
 type: object
+description: ''
 properties:
   type:
     type: string
-    pattern: abs
+    enum:
+      - ABS
   status:
     type: string
+    enum:
+      - healthy
+      - unresponsive
+      - error
   odometer:
     type: number
     description: Units in kilometers
@@ -44,4 +50,3 @@ properties:
           type: string
         FMI_description:
           type: string
-description: ''

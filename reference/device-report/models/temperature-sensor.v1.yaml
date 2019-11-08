@@ -3,8 +3,14 @@ type: object
 properties:
   type:
     type: string
+    enum:
+      - temperature-sensor
   status:
     type: string
+    enum:
+      - healthy
+      - unresponsive
+      - error
   ambient_temperature:
     type: number
     description: Units are in celsius

@@ -3,8 +3,13 @@ type: object
 properties:
   type:
     type: string
+    enum:
+      - ATIS
   status:
     type: string
+    enum:
+      - unknown
+      - bulb-active
   quantity:
     type: integer
   inflation_time:

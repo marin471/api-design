@@ -4,8 +4,14 @@ description: ''
 properties:
   type:
     type: string
+    enum:
+      - voltage-sensor
   status:
     type: string
+    enum:
+      - healthy
+      - unresponsive
+      - error
   external:
     type: object
     description: Voltage of the auxiliary power input measured in mV
