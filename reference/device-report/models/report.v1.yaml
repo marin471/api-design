@@ -46,21 +46,9 @@ properties:
     type: string
   sensor_data:
     type: array
-    enum:
-      - abs
-      - tpms
-      - atis
-      - gps
-      - cargo
-      - voltage
     items:
-      type: object
-      properties:
-        type:
-          type: string
-        status:
-          type: string
-        data:
-          type: object
+      anyOf:
+        - $ref: ./tpms-sensor.v1.yaml
+        - $ref: ./voltage-sensor.v1.yaml
 required:
   - device_id

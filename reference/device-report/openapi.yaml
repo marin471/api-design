@@ -22,6 +22,9 @@ paths:
             application/json:
               schema:
                 $ref: ./models/report.v1.yaml
+            application/xml:
+              schema:
+                $ref: ./models/report.v1.yaml
       parameters:
         - schema:
             type: integer
