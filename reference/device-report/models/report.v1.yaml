@@ -17,6 +17,8 @@ properties:
     type: string
   event_name:
     type: string
+  version:
+    type: string
   status:
     type: object
     properties:
@@ -42,8 +44,6 @@ properties:
         type: number
       is_on_trip:
         type: boolean
-  version:
-    type: string
   sensor_data:
     type: array
     items:

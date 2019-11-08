@@ -9,6 +9,25 @@ properties:
   odometer:
     type: number
     description: Units in kilometers
+  vin:
+    type: string
+  voltage:
+    description: Units in millivolts (mV)
+    type: number
+  warning_lamp_status:
+    type: string
+    enum:
+      - active
+      - inactive
+      - error
+      - na
+  brake_control_status:
+    type: string
+    enum:
+      - active
+      - inactive
+      - error
+      - na
   faults:
     type: array
     description: Based on the J1587 standard
@@ -25,22 +44,3 @@ properties:
           type: string
         FMI_description:
           type: string
-  warning_lamp_status:
-    type: string
-    enum:
-      - active
-      - inactive
-      - error
-      - na
-  vin:
-    type: string
-  voltage:
-    description: Units in millivolts (mV)
-    type: number
-  brake_control_status:
-    type: string
-    enum:
-      - active
-      - inactive
-      - error
-      - na

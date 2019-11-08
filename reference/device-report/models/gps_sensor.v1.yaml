@@ -5,10 +5,14 @@ properties:
     type: string
   status:
     type: string
-  latitude:
-    type: number
-  longitude:
-    type: number
-  time_of_measurement:
-    type: string
-    format: date
+  locations:
+    type: array
+    items:
+      type: object
+      properties:
+        latitude:
+          type: string
+        longitude:
+          type: string
+        time_of_measurement:
+          type: string

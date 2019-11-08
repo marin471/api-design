@@ -2,6 +2,10 @@ title: Gateway Voltage Sensor
 type: object
 description: ''
 properties:
+  type:
+    type: string
+  status:
+    type: string
   external:
     type: object
     description: Voltage of the auxiliary power input measured in mV
@@ -41,7 +45,3 @@ properties:
         description: units are in mV
       energy:
         type: number
-  type:
-    type: string
-  status:
-    type: string
