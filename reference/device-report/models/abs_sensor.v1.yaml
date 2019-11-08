@@ -44,3 +44,4 @@ properties:
           type: string
         FMI_description:
           type: string
+description: ''
