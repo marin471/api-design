@@ -1,7 +1,5 @@
-title: gps_sensor
+title: GPS Sensor
 type: object
-x-tags:
-  - gps
 properties:
   latitude:
     type: number
