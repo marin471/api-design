@@ -18,9 +18,9 @@ properties:
     type: string
   event_name:
     type: string
-  version:
-    type: string
   gateway_model:
+    type: string
+  version:
     type: string
   summary_data:
     type: object
@@ -41,8 +41,6 @@ properties:
         enum:
           - external
           - battery
-      ambient_temperature:
-        type: number
       internal_temperature:
         type: number
       is_on_trip:
