@@ -11,9 +11,6 @@ properties:
       - healthy
       - unresponsive
       - error
-  ambient_temperature:
-    type: number
-    description: Units are in celsius
   internal_temperature_1:
     type: number
     description: Units are in celsius

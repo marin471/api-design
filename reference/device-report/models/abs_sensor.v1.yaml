@@ -15,7 +15,7 @@ properties:
   odometer:
     type: number
     description: Units in kilometers
-  vin:
+  VIN:
     type: string
   voltage:
     description: Units in millivolts (mV)
@@ -26,14 +26,14 @@ properties:
       - active
       - inactive
       - error
-      - na
+      - not-applicable
   brake_control_status:
     type: string
     enum:
       - active
       - inactive
       - error
-      - na
+      - not-applicable
   faults:
     type: array
     description: Based on the J1587 standard

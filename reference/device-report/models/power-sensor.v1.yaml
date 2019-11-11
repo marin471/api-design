@@ -1,11 +1,11 @@
-title: Gateway Voltage Sensor
+title: Gateway Power Sensor
 type: object
 description: ''
 properties:
   type:
     type: string
     enum:
-      - voltage-sensor
+      - power-sensor
   status:
     type: string
     enum:
@@ -22,13 +22,6 @@ properties:
       external_voltage_2:
         type: number
         description: units are in mV
-  charging:
-    type: object
-    description: Voltage of the dedicated charging power input measured in mV
-    properties:
-      voltage:
-        type: number
-        description: Units are in millivolts (mV)
   battery:
     type: object
     description: Voltage of the main battery measured in mV
@@ -44,10 +37,9 @@ properties:
   solar:
     type: object
     properties:
-      current:
+      average-current:
         type: number
-      voltage:
+        description: Units in milliamps (mA)
+      instantaneous-current:
         type: number
-        description: units are in mV
-      energy:
-        type: number
+        description: Units in milliamps (mA)

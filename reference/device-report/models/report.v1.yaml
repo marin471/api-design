@@ -1,4 +1,4 @@
-title: Device Report
+title: Gateway Report
 description: Standard used to represent a report from PCT devices
 type: object
 xml:
@@ -11,15 +11,20 @@ properties:
     description: ''
   asset_id:
     type: string
-  sequence_number:
-    type: string
+  report_number:
+    type: integer
+    description: A unique number that increments each time a report is sent out.
   event_datetime:
     type: string
   event_name:
     type: string
   version:
     type: string
-  status:
+  gateway_model:
+    type: string
+required:
+  - device_id
+summary_data:
     type: object
     properties:
       latitude:
@@ -31,7 +36,7 @@ properties:
         description: Units in kilometers per hour
       heading:
         type: number
-      location_timestamp:
+      location_datetime:
         type: string
       current_power_source:
         type: string
@@ -44,16 +49,18 @@ properties:
         type: number
       is_on_trip:
         type: boolean
-  sensor_data:
-    type: array
-    items:
-      anyOf:
-        - $ref: ./abs_sensor.v1.yaml
-        - $ref: ./atis-sensor.v1.yaml
-        - $ref: ./cargo_sensor.v1.yaml
-        - $ref: ./gps_sensor.v1.yaml
-        - $ref: ./temperature-sensor.v1.yaml
-        - $ref: ./tpms-sensor.v1.yaml
-        - $ref: ./voltage-sensor.v1.yaml
-required:
-  - device_id
+internal_sensor_data:
+  type: array
+  items:
+    anyOf:
+      - $ref: ./gps_sensor.v1.yaml
+      - $ref: ./temperature-sensor.v1.yaml
+      - $ref: ./power-sensor.v1.yaml
+perpherial_sensor_data:
+  type: array
+  items:
+    anyOf:
+      - $ref: ./abs_sensor.v1.yaml
+      - $ref: ./atis-sensor.v1.yaml
+      - $ref: ./cargo_sensor.v1.yaml
+      - $ref: ./tpms-sensor.v1.yaml

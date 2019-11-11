@@ -11,6 +11,12 @@ properties:
       - healthy
       - unresponsive
       - error
+  state:
+    type: string
+    enum:
+      - loaded
+      - empty
+      - unknown
   distance_to_cargo:
     type: number
     description: "Units are in meters. If the status is set to 'loaded', a value of 0 means cargo is within 1 meter of sensor "

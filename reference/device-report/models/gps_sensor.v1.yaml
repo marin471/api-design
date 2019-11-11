@@ -17,8 +17,8 @@ properties:
       type: object
       properties:
         latitude:
-          type: string
+          type: number
         longitude:
-          type: string
-        time_of_measurement:
+          type: number
+        measurement_datetime:
           type: string
