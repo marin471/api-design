@@ -22,9 +22,7 @@ properties:
     type: string
   gateway_model:
     type: string
-required:
-  - device_id
-summary_data:
+  summary_data:
     type: object
     properties:
       latitude:
@@ -49,18 +47,21 @@ summary_data:
         type: number
       is_on_trip:
         type: boolean
-internal_sensor_data:
-  type: array
-  items:
-    anyOf:
-      - $ref: ./gps_sensor.v1.yaml
-      - $ref: ./temperature-sensor.v1.yaml
-      - $ref: ./power-sensor.v1.yaml
-perpherial_sensor_data:
-  type: array
-  items:
-    anyOf:
-      - $ref: ./abs_sensor.v1.yaml
-      - $ref: ./atis-sensor.v1.yaml
-      - $ref: ./cargo_sensor.v1.yaml
-      - $ref: ./tpms-sensor.v1.yaml
+  internal_sensor_data:
+    type: array
+    items:
+      anyOf:
+        - $ref: ./gps_sensor.v1.yaml
+        - $ref: ./temperature-sensor.v1.yaml
+        - $ref: ./power-sensor.v1.yaml
+  perpherial_sensor_data:
+    type: array
+    items:
+      anyOf:
+        - $ref: ./abs_sensor.v1.yaml
+        - $ref: ./atis-sensor.v1.yaml
+        - $ref: ./cargo_sensor.v1.yaml
+        - $ref: ./tpms-sensor.v1.yaml
+required:
+  - device_id
+
