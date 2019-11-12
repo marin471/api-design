@@ -6,21 +6,22 @@ xml:
 x-examples:
   example-1: {}
 properties:
-  device_id:
+  gateway_id:
     type: string
-    description: ''
+    description: 'The unique id for the gateway. For cellular devices, this will equal the IMEI number'
   asset_id:
     type: string
+    description: The asset-id that the gateway is assigned to
   report_number:
     type: integer
-    description: A unique number that increments each time a report is sent out.
+    description: 'A number to that is auto-incremented for each valid report processed by the server '
   event_datetime:
     type: string
+    description: The datetime in UTC of when the event was generated on the gateway.
   event_name:
     type: string
+    description: A discrete list that describes the triggering event for why the report was generated and send by the device
   gateway_model:
-    type: string
-  version:
     type: string
   summary_data:
     type: object
@@ -29,29 +30,26 @@ properties:
         type: number
       longitude:
         type: number
+      location_datetime:
+        type: string
+        description: Datetime of when the GPS measurements were taken.
       speed:
         type: number
         description: Units in kilometers per hour
       heading:
         type: number
-      location_datetime:
-        type: string
       current_power_source:
         type: string
         enum:
           - external
           - battery
+        description: Indicates whether or not the gateway is currently operating off external power or the battery.
       internal_temperature:
         type: number
-      is_on_trip:
+        description: Internal tempature of the gateway. Units in Celsius
+      is_trip:
         type: boolean
-  internal_sensor_data:
-    type: array
-    items:
-      anyOf:
-        - $ref: ./gps_sensor.v1.yaml
-        - $ref: ./temperature-sensor.v1.yaml
-        - $ref: ./power-sensor.v1.yaml
+        description: Indicates whether the trailer is on a trip. The default trip is defined as XYY but may vary based on customized settings.
   perpherial_sensor_data:
     type: array
     items:
@@ -60,6 +58,14 @@ properties:
         - $ref: ./atis-sensor.v1.yaml
         - $ref: ./cargo_sensor.v1.yaml
         - $ref: ./tpms-sensor.v1.yaml
+  internal_sensor_data:
+    type: array
+    items:
+      anyOf:
+        - $ref: ./gps_sensor.v1.yaml
+        - $ref: ./temperature-sensor.v1.yaml
+        - $ref: ./power-sensor.v1.yaml
+  version:
+    type: string
 required:
-  - device_id
-
+  - gateway_id
