@@ -12,5 +12,3 @@ properties:
       - bulb-active
   airflow_alert:
     type: string
-    enum:
-      - bulb-status
