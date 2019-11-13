@@ -10,9 +10,7 @@ properties:
     enum:
       - unknown
       - bulb-active
-  bulb_status:
-    type:
-      - integer
-      - string
+  airflow_alert:
+    type: string
     enum:
       - bulb-status
