@@ -21,8 +21,6 @@ properties:
   event_name:
     type: string
     description: A discrete list that describes the triggering event for why the report was generated and send by the device
-  gateway_model:
-    type: string
   summary_data:
     type: object
     properties:

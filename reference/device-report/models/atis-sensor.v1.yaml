@@ -10,7 +10,9 @@ properties:
     enum:
       - unknown
       - bulb-active
-  quantity:
-    type: integer
-  inflation_time:
-    type: number
+  bulb_status:
+    type:
+      - integer
+      - string
+    enum:
+      - bulb-status
