@@ -5,12 +5,6 @@ properties:
     type: string
     enum:
       - gps-sensor
-  status:
-    type: string
-    enum:
-      - healthy
-      - unresponsive
-      - error
   latitude:
     type: number
   longitude: {}

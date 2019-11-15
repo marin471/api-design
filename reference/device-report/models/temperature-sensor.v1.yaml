@@ -5,12 +5,6 @@ properties:
     type: string
     enum:
       - temperature-sensor
-  status:
-    type: string
-    enum:
-      - healthy
-      - unresponsive
-      - error
   internal_temperature_1:
     type: number
     description: Units are in celsius

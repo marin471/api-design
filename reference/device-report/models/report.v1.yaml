@@ -38,10 +38,12 @@ properties:
         type: number
       current_power_source:
         type: string
-        enum:
-          - external
-          - battery
         description: Indicates whether or not the gateway is currently operating off external power or the battery.
+        enum:
+          - battery
+          - external_power
+          - external_power1
+          - external_power2
       internal_temperature:
         type: number
         description: Internal tempature of the gateway. Units in Celsius
@@ -50,6 +52,8 @@ properties:
         description: Indicates whether the trailer is on a trip. The default trip is defined as XYY but may vary based on customized settings.
       odometer:
         type: integer
+      ambient_temperature:
+        type: string
   perpherial_sensor_data:
     type: array
     items:
