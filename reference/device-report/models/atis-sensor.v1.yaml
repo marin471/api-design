@@ -9,6 +9,5 @@ properties:
     type: string
     enum:
       - unknown
-      - bulb-active
   airflow_alert:
-    type: string
+    type: boolean

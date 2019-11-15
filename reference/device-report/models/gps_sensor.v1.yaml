@@ -11,14 +11,8 @@ properties:
       - healthy
       - unresponsive
       - error
-  locations:
-    type: array
-    items:
-      type: object
-      properties:
-        latitude:
-          type: number
-        longitude:
-          type: number
-        measurement_datetime:
-          type: string
+  latitude:
+    type: number
+  longitude: {}
+  measurement_datetime:
+    type: string

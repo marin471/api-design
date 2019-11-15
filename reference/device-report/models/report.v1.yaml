@@ -48,6 +48,8 @@ properties:
       is_trip:
         type: boolean
         description: Indicates whether the trailer is on a trip. The default trip is defined as XYY but may vary based on customized settings.
+      odometer:
+        type: integer
   perpherial_sensor_data:
     type: array
     items:

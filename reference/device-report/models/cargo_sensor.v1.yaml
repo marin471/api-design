@@ -11,7 +11,7 @@ properties:
       - healthy
       - unresponsive
       - error
-  state:
+  cargo-state:
     type: string
     enum:
       - loaded

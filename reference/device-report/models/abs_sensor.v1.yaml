@@ -27,13 +27,6 @@ properties:
       - inactive
       - error
       - not-applicable
-  brake_control_status:
-    type: string
-    enum:
-      - active
-      - inactive
-      - error
-      - not-applicable
   faults:
     type: array
     description: Based on the J1587 standard

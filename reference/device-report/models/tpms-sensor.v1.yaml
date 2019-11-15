@@ -11,22 +11,24 @@ properties:
       - healthy
       - unresponsive
       - error
-  location:
-    type: string
-    description: |-
-      Format is 'Axle number|Orientation|Tire index'
+  measurements:
+    type: array
+    items:
+      type: object
+      properties:
+        location:
+          type: string
+          description: |-
+            Format is 'Axle number|Orientation|Tire index'
 
-      1. Axle number is an integer from 1 to n [max 9]
-      2. Orientation is character either 'L' [left] or 'R' [right]
-      3. Tire index is an integer from 1 to n [max 9] where 1 is the outermost tire
-  temperature:
-    description: Units are in celsius
-    type: number
-  pressure:
-    type: number
-    description: Units are in millibars
+            Axle number is an integer from 1 to n [max 9]
+            Orientation is character either 'L' [left] or 'R' [right]
+            Tire index is an integer from 1 to n [max 9] where 1 is the outermost tire
+        temperature:
+          type: number
+          description: Units in celcius
+        pressure:
+          type: number
+          description: Units in millibars
 required:
   - status
-  - location
-  - temperature
-  - pressure

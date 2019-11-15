@@ -34,12 +34,3 @@ properties:
       temperature:
         type: number
         description: Units are in celsius
-  solar:
-    type: object
-    properties:
-      average-current:
-        type: number
-        description: Units in milliamps (mA)
-      instantaneous-current:
-        type: number
-        description: Units in milliamps (mA)
