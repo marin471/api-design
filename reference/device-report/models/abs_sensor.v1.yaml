@@ -19,7 +19,7 @@ properties:
     type: string
   voltage:
     type: number
-    description: Units in millivolts (mV)
+    description: Units in volts with two digits of precision
     format: float
     example: '11.23'
   warning_lamp_status:
