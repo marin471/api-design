@@ -5,7 +5,7 @@ properties:
     type: string
     enum:
       - ATIS
-  status:
+  condition:
     type: string
     enum:
       - unknown

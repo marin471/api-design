@@ -6,7 +6,7 @@ properties:
     type: string
     enum:
       - ABS
-  status:
+  condition:
     type: string
     enum:
       - healthy
@@ -18,8 +18,10 @@ properties:
   VIN:
     type: string
   voltage:
-    description: Units in millivolts (mV)
     type: number
+    description: Units in millivolts (mV)
+    format: float
+    example: '11.23'
   warning_lamp_status:
     type: string
     enum:

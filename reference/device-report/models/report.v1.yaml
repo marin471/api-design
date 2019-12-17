@@ -17,7 +17,9 @@ properties:
     description: 'A number to that is auto-incremented for each valid report processed by the server '
   event_datetime:
     type: string
-    description: The datetime in UTC of when the event was generated on the gateway.
+    description: 'The datetime of when the event was generated on the gateway in UTC. Format is ISO8601. '
+    format: date-time
+    example: '2012-04-21T18:25:43Z'
   event_name:
     type: string
     description: A discrete list that describes the triggering event for why the report was generated and send by the device
@@ -26,16 +28,29 @@ properties:
     properties:
       latitude:
         type: number
+        default: 33.678925
+        description: Floating number with 6 digits of precision
+        format: float
       longitude:
         type: number
+        default: -117.862869
+        description: Floating number with 6 digits of precision
+        format: float
+        example: '37.143215'
       location_datetime:
         type: string
-        description: Datetime of when the GPS measurements were taken.
+        description: Datetime of when the GPS measurements were taken in UTC. Format is ISO8601.
       speed:
         type: number
-        description: Units in kilometers per hour
+        description: Units in kilometers per hour rounded to nearest tenth.
+        format: float
+        example: '80.1'
+        minimum: 0
+        maximum: 300
       heading:
-        type: number
+        type: integer
+        minimum: 0
+        maximum: 360
       current_power_source:
         type: string
         description: Indicates whether or not the gateway is currently operating off external power or the battery.
@@ -71,5 +86,8 @@ properties:
         - $ref: ./power-sensor.v1.yaml
   version:
     type: string
+    description: "Version format is a.b.c  \n\n1. a is a major version. Any major version change will be substantially different and announced in advance.\n\n2. b is a minor version and signals inclusion of new fields but should not break endpoints. Changes will be announced in advance.\n\n3. c is reserved for internal use can be ignored. "
+  gateway_sequence_number:
+    type: integer
 required:
   - gateway_id

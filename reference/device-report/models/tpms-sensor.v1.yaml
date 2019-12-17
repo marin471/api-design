@@ -5,7 +5,7 @@ properties:
     type: string
     enum:
       - TPMS
-  status:
+  condition:
     type: string
     enum:
       - healthy
@@ -26,9 +26,9 @@ properties:
             Tire index is an integer from 1 to n [max 9] where 1 is the outermost tire
         temperature:
           type: number
-          description: Units in celcius
+          description: Units in celcius rounded to nearest tenth.
         pressure:
-          type: number
           description: Units in millibars
+          type: integer
 required:
-  - status
+  - condition

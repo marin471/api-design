@@ -12,19 +12,25 @@ properties:
     properties:
       external_voltage_1:
         type: number
-        description: Units are in millivolts (mV)
+        description: Units are in volts with two digits of precision
+        format: float
+        example: '11.23'
       external_voltage_2:
         type: number
-        description: units are in mV
+        description: units are in volts with two digits of precision
+        format: float
+        example: '11.23'
   battery:
     type: object
     description: Voltage of the main battery measured in mV
     properties:
       voltage:
         type: number
-        description: Units are in millivolts (mV)
+        description: Units are in volts with two digits of precision
+        format: float
+        example: '11.23'
       remaining_capacity:
-        type: number
+        type: integer
       temperature:
         type: number
         description: Units are in celsius

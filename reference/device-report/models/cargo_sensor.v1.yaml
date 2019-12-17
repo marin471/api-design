@@ -5,7 +5,7 @@ properties:
     type: string
     enum:
       - cargo-sensor
-  status:
+  condition:
     type: string
     enum:
       - healthy
@@ -19,4 +19,4 @@ properties:
       - unknown
   distance_to_cargo:
     type: number
-    description: "Units are in meters. If the status is set to 'loaded', a value of 0 means cargo is within 1 meter of sensor "
+    description: "Units are in meters rounded to nearest tenth. If the status is set to 'loaded', a value of 0 means cargo is within 1 meter of sensor "
