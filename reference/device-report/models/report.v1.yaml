@@ -56,7 +56,6 @@ properties:
         description: Indicates whether or not the gateway is currently operating off external power or the battery.
         enum:
           - battery
-          - external_power
           - external_power1
           - external_power2
       internal_temperature:
