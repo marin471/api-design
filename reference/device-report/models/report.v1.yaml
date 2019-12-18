@@ -64,7 +64,7 @@ properties:
         description: Internal tempature of the gateway. Units in Celsius
       is_trip:
         type: boolean
-        description: Indicates whether the trailer is on a trip. The default trip is defined as  but may vary based on customized settings.
+        description: Indicates whether the trailer is on a trip. Please consult the functional behavior document for each gateway product you own.
       odometer:
         type: integer
       ambient_temperature:
