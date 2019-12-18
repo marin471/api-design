@@ -70,7 +70,7 @@ properties:
       ambient_temperature:
         type: number
         description: Units in celcius rounded to nearest tenth.
-  peripheral_sensor:
+  peripheral_sensors:
     type: array
     items:
       anyOf:
@@ -78,7 +78,7 @@ properties:
         - $ref: ./atis-sensor.v1.yaml
         - $ref: ./cargo_sensor.v1.yaml
         - $ref: ./tpms-sensor.v1.yaml
-  internal_sensor:
+  internal_sensors:
     type: array
     items:
       anyOf:

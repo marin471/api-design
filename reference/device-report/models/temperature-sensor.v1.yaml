@@ -11,3 +11,5 @@ properties:
   internal_temperature_2:
     type: number
     description: Units in celcius rounded to nearest tenth.
+required:
+  - type

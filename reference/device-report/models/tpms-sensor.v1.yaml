@@ -1,5 +1,6 @@
 title: TPMS sensor
 type: object
+description: ''
 properties:
   type:
     type: string
@@ -42,5 +43,5 @@ properties:
             1 is the curbside tire
             2 is the roadside tire
 required:
+  - type
   - condition
-description: ''

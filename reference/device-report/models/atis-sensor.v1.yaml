@@ -11,3 +11,5 @@ properties:
       - unknown
   airflow_alert:
     type: boolean
+required:
+  - type

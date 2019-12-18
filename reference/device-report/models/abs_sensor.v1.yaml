@@ -22,13 +22,6 @@ properties:
     description: Units in volts with two digits of precision
     format: float
     example: '11.23'
-  warning_lamp_status:
-    type: string
-    enum:
-      - active
-      - inactive
-      - error
-      - unknown
   faults:
     type: array
     description: Based on the J1587 standard
@@ -45,3 +38,5 @@ properties:
           type: string
         FMI_description:
           type: string
+required:
+  - type
