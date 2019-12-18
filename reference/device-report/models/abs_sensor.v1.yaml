@@ -14,7 +14,7 @@ properties:
       - error
   odometer:
     type: number
-    description: Units in kilometers
+    description: Units in kilometers rounded to nearest tenth
   VIN:
     type: string
   voltage:
@@ -28,7 +28,7 @@ properties:
       - active
       - inactive
       - error
-      - not-applicable
+      - unknown
   faults:
     type: array
     description: Based on the J1587 standard

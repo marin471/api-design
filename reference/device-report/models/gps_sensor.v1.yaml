@@ -7,7 +7,8 @@ properties:
       - gps-sensor
   latitude:
     type: number
-  longitude: {}
+  longitude:
+    type: number
   measurement_datetime:
     type: string
     description: The datetime of the GPS reading in UTC. Format is ISO8601.

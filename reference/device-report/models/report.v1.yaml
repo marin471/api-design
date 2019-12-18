@@ -23,7 +23,7 @@ properties:
   event_name:
     type: string
     description: A discrete list that describes the triggering event for why the report was generated and send by the device
-  summary_data:
+  summary:
     type: object
     properties:
       latitude:
@@ -46,11 +46,11 @@ properties:
         format: float
         example: '80.1'
         minimum: 0
-        maximum: 300
+        maximum: 999
       heading:
         type: integer
         minimum: 0
-        maximum: 360
+        maximum: 359
       current_power_source:
         type: string
         description: Indicates whether or not the gateway is currently operating off external power or the battery.
@@ -64,12 +64,13 @@ properties:
         description: Internal tempature of the gateway. Units in Celsius
       is_trip:
         type: boolean
-        description: Indicates whether the trailer is on a trip. The default trip is defined as XYY but may vary based on customized settings.
+        description: Indicates whether the trailer is on a trip. The default trip is defined as  but may vary based on customized settings.
       odometer:
         type: integer
       ambient_temperature:
-        type: string
-  perpherial_sensor_data:
+        type: number
+        description: Units in celcius rounded to nearest tenth.
+  peripheral_sensor:
     type: array
     items:
       anyOf:
@@ -77,7 +78,7 @@ properties:
         - $ref: ./atis-sensor.v1.yaml
         - $ref: ./cargo_sensor.v1.yaml
         - $ref: ./tpms-sensor.v1.yaml
-  internal_sensor_data:
+  internal_sensor:
     type: array
     items:
       anyOf:
@@ -86,8 +87,13 @@ properties:
         - $ref: ./power-sensor.v1.yaml
   version:
     type: string
-    description: "Version format is a.b.c  \n\n1. a is a major version. Any major version change will be substantially different and announced in advance.\n\n2. b is a minor version and signals inclusion of new fields but should not break endpoints. Changes will be announced in advance.\n\n3. c is reserved for internal use can be ignored. "
+    description: "Version format is a.b.c  \n\n(a) is major change\n(b) is minor change, may possibly partially break some endpoints\n(c) is for inclusion of new fields, totally backwards compatible\n"
   gateway_sequence_number:
     type: integer
 required:
   - gateway_id
+  - report_number
+  - event_datetime
+  - event_name
+  - summary
+  - version

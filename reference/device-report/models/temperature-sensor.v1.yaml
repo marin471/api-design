@@ -7,7 +7,7 @@ properties:
       - temperature-sensor
   internal_temperature_1:
     type: number
-    description: Units are in celsius
+    description: Units in celcius rounded to nearest tenth.
   internal_temperature_2:
     type: number
-    description: Units are in celsius
+    description: Units in celcius rounded to nearest tenth.
