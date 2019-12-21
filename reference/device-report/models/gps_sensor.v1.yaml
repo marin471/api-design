@@ -13,5 +13,8 @@ properties:
     type: string
     description: The datetime of the GPS reading in UTC. Format is ISO8601.
     example: '2012-04-21T18:25:43Z'
+  speed:
+    description: Units in kilometers per hour rounded to nearest tenth.
+    type: number
 required:
   - type
