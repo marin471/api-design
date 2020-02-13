@@ -1,0 +1,17 @@
+title: gladhands
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - gladhands
+  condition:
+    type: string
+    enum:
+      - healthy
+      - error
+  status:
+    type: string
+    enum:
+      - locked
+      - unlocked

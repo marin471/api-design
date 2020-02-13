@@ -1,0 +1,21 @@
+title: tractor trailer pairing
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - tractor-pairing
+  condition:
+    type: string
+    enum:
+      - healthy
+      - error
+  status:
+    type: string
+    enum:
+      - paired
+      - unpaired
+  unique_id:
+    type: string
+  t:
+    type: string

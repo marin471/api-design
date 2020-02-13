@@ -1,0 +1,15 @@
+title: tank pressure
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - tank-pressure
+  condition:
+    type: string
+    enum:
+      - healthy
+      - error
+  pressure:
+    type: string
+    example: Air pressure in millibar

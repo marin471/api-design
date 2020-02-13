@@ -1,0 +1,30 @@
+title: lite sentry
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - lite-sentry
+  condition:
+    type: string
+    enum:
+      - healthy
+      - error
+  circuits:
+    type: array
+    items:
+      type: object
+      properties:
+        circuit_color:
+          type: string
+          enum:
+            - red
+            - green
+            - yellow
+            - black
+            - brown
+        status:
+          type: string
+          enum:
+            - healthy
+            - fault
