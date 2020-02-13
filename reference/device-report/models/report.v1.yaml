@@ -69,6 +69,35 @@ properties:
       ambient_temperature:
         type: number
         description: Units in celcius rounded to nearest tenth.
+      is_door_closed:
+        type: boolean
+        enum:
+          - open
+          - closed
+      tank_pressure:
+        type: number
+      is_paired:
+        type: boolean
+        enum:
+          - paired
+          - not-paired
+      lite_sentry_status:
+        type: string
+        enum:
+          - normal
+          - light-out
+      gladhands_status:
+        type: string
+        enum:
+          - locked
+          - unlocked
+  internal_sensors:
+    type: array
+    items:
+      anyOf:
+        - $ref: ./gps_sensor.v1.yaml
+        - $ref: ./temperature-sensor.v1.yaml
+        - $ref: ./power-sensor.v1.yaml
   peripheral_sensors:
     type: array
     items:
@@ -77,13 +106,12 @@ properties:
         - $ref: ./atis-sensor.v1.yaml
         - $ref: ./cargo_sensor.v1.yaml
         - $ref: ./tpms-sensor.v1.yaml
-  internal_sensors:
-    type: array
-    items:
-      anyOf:
-        - $ref: ./gps_sensor.v1.yaml
-        - $ref: ./temperature-sensor.v1.yaml
-        - $ref: ./power-sensor.v1.yaml
+        - $ref: ./door-sensor.v1.yaml
+        - $ref: ./gladhands.v1.yaml
+        - $ref: ./lite-sentry.v1.yaml
+        - $ref: ./tank-pressure.v1.yaml
+        - $ref: ./trailer-weight.v1.yaml
+        - $ref: ./tractor-pairing.v1.yaml
   version:
     type: string
     description: "Version format is a.b.c  \n\n(a) is major change\n(b) is minor change, may possibly partially break some endpoints\n(c) is for inclusion of new fields, totally backwards compatible\n"

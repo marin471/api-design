@@ -7,6 +7,7 @@ properties:
       - lite-sentry
   condition:
     type: string
+    deprecated: true
     enum:
       - healthy
       - error
