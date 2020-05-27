@@ -1,14 +1,17 @@
 openapi: 3.0.0
 info:
-  title: device
+  title: Gateway Service
   version: '1.0'
+  contact:
+    name: Brent Whitney
+    email: bwhitney@phillipsind.com
+  description: 'Gateway data is sent constantly to our cloud, processed and stored in our system. This API provided secure access to customers and partners to access this data.'
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /device/report:
+  /gateway/reports:
     get:
-      summary: Return a report
-      tags: []
+      summary: Gateway report data
       responses:
         '200':
           description: OK
@@ -41,5 +44,16 @@ paths:
           in: query
           name: to
           description: 'to: [either datetime or gateway_sequence_number]'
+      description: Allows customers to retrieve gateway and sensor data
+      tags:
+        - Gateway
+    parameters: []
 components:
   schemas: {}
+  securitySchemes:
+    API Key - 1:
+      name: API Key
+      type: apiKey
+      in: query
+tags:
+  - name: Gateway
