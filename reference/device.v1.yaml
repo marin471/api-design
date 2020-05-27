@@ -21,18 +21,25 @@ paths:
         - schema:
             type: string
           in: query
-          name: report_number
+          name: gateway_id
+          description: typically the imei number
+        - schema:
+            type: string
+            enum:
+              - SEQUENCE
+              - DATETIME
+          in: query
+          name: query_method
+          description: ''
         - schema:
             type: string
           in: query
-          name: imei
+          name: from
+          description: 'from: [datetime or gateway_sequence_number]'
         - schema:
-            type: string
+            type: integer
           in: query
-          name: start_datetime
-        - schema:
-            type: string
-          in: query
-          name: end_datetime
+          name: to
+          description: 'to: [either datetime or gateway_sequence_number]'
 components:
   schemas: {}

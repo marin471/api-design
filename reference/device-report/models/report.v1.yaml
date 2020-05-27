@@ -23,6 +23,14 @@ properties:
   event_name:
     type: string
     description: A discrete list that describes the triggering event for why the report was generated and send by the device
+  server_datetime:
+    type: string
+    description: The datetime that the report was received in the serverin UTC. Format is ISO8601
+  gateway_sequence_number:
+    type: integer
+  version:
+    type: string
+    description: "Version format is a.b.c  \n\n(a) is major change\n(b) is minor change, may possibly partially break some endpoints\n(c) is for inclusion of new fields, totally backwards compatible\n"
   summary:
     type: object
     properties:
@@ -112,15 +120,10 @@ properties:
         - $ref: ./tank-pressure.v1.yaml
         - $ref: ./trailer-weight.v1.yaml
         - $ref: ./tractor-pairing.v1.yaml
-  version:
-    type: string
-    description: "Version format is a.b.c  \n\n(a) is major change\n(b) is minor change, may possibly partially break some endpoints\n(c) is for inclusion of new fields, totally backwards compatible\n"
-  gateway_sequence_number:
-    type: integer
 required:
   - gateway_id
   - report_number
   - event_datetime
   - event_name
-  - summary
   - version
+  - summary
